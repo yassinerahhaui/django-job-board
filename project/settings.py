@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'k4vou4qtze%%l&e*wxnl&=gg8s+iz91h*-svf$mc8_e6c7l(xg'
+SECRET_KEY = '(+e2_)nsifc3ys5yw6oj$!267v5s(&aw8!jarxzffj#3u*822u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,15 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djmoney',
-    'phonenumber_field',
-    
-    # my apps------------
     'job',
-    'blog',
-    'contact',
-    'home',
-    'login',
+    'djmoney',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +78,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jobBoard',
+        'NAME': 'jobboard',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
