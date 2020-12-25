@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% load bootstrap4 %}
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form userform %}
+    {% bootstrap_form profileform %}
+    <input type="submit" class="boxed-btn3 w-100" value="Save" />
+  </form>
+{% endblock %}
