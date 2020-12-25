@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .forms import SignupUserForm, UserForm, ProfileForm
 from django.contrib.auth import authenticate, login
 from .models import Profile
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def signup(request):
@@ -24,7 +25,7 @@ def signup(request):
     return render(request,'registration/signup.html',context)
 
 #####################################################################
-
+@login_required
 def profile(request):
     profile = Profile.objects.get(user=request.user)
     context = {
@@ -33,7 +34,7 @@ def profile(request):
     return render(request,'accounts/profile.html',context)
 
 #####################################################################
-
+@login_required
 def profile_edit(request):
     profile = Profile.objects.get(user=request.user)
     if request.method == 'POST':
